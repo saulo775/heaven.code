@@ -66,3 +66,43 @@ section.banner > .container {
     transition: 600ms;
     font-weight: 600;
 }
+
+section.cadastro-lead {
+    background-color: rgb(21, 182, 160);
+    padding: 20px 0;
+}
+
+section.cadastro-lead h2 {
+    color: white;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+section.cadastro-lead form {
+    vertical-align: middle;
+    position: relative;
+    top: 0px;
+}
+
+section.cadastro-lead input[type=text] {
+    width: 85%;
+    height: 40px;
+    border: solid 1px #ccc;
+    padding-left: 8px;
+    vertical-align: middle;
+}
+
+section.cadastro-lead input[type=submit] {
+    width: 15%;
+    height: 40px;
+    vertical-align: middle;
+}
+
+
+@media screen and (max-width: 1024px){
+    section.cadastro-lead form {
+        vertical-align: middle;
+        position: relative;
+        top: 0px;
+    }
+}
