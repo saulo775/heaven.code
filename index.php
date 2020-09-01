@@ -118,7 +118,7 @@
     </section>
 
     <section class="equipe">
-        <h2>Equipe</h2>
+        <h2>Nossa Equipe</h2>
         <div class="container equipe-container">
             <div class="row">
                 <div class="col-md-6">
@@ -186,6 +186,72 @@
             </div>
         </div><!--equipe-container-->
       </section>
+
+      <section class="final-site">
+          <div class="container">
+              <div class="row">
+
+                  <div class="col-md-6">
+                    <h2>Fale conosco</h2>
+                    <form>
+                        <div class="form-group">
+                          <label for="email">Nome:</label>
+                          <input type="text" name="nome" class="form-control" id="nome">
+                        </div>
+
+                         <div class="form-group">
+                          <label for="email">E-mail:</label>
+                          <input type="email" name="email" class="form-control" id="email">
+                        </div>
+
+                         <div class="form-group">
+                          <label for="email">Mensagem:</label>
+                          <textarea class="form-control"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+
+                  <div class="col-md-6">
+                      <h2>Nossos planos</h2>
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Plano Semanal</th>
+                                <th>Plano Diário</th>
+                                <th>Plano Anual</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>R$199,00</td>
+                               <td>R$299,00</td>
+                                <td>R$399,00</td>
+                              </tr>
+
+                              <tr>
+                                <td>R$199,00</td>
+                               <td>R$299,00</td>
+                                <td>R$399,00</td>
+                              </tr>
+
+                               <tr>
+                                <td>R$199,00</td>
+                               <td>R$299,00</td>
+                                <td>R$399,00</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                  </div>
+
+              </div>
+          </div>
+      </section>
+
+      <footer>
+        <p class="text-center">Todos os direitos reservados!</p>
+      </footer>
   </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

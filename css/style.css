@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color : rgb(0, 141, 160);
+}
 
 .navbar-brand {
     font-size: 24px;
@@ -43,7 +46,7 @@ section.banner > .container {
 }
 
 .chamada-banner h2  {
-    color: rgb(21, 182, 160);
+    color: var(--primary-color);
     font-size: 48px;
 }
 
@@ -73,7 +76,7 @@ section.banner > .container {
 }
 
 section.cadastro-lead {
-    background-color: rgb(21, 182, 160);
+    background-color: var(--primary-color);
     padding: 20px 0;
 }
 
@@ -145,7 +148,7 @@ section.diferenciais .container h3 {
 }
 
 section.equipe h2 {
-    background-color: rgb(21, 182, 160);
+    background-color: var(--primary-color);
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -182,6 +185,29 @@ section.equipe h2 {
     background-color: rgba(134, 78, 78, 0.466);
 }
 
+
+section.final-site {
+	padding:30px 0;
+	color: #4b4b4b;
+}
+
+section.final-site textarea {
+	height: 120px;
+}
+
+section.final-site h2 {
+	margin:20px 0;
+	font-size: 26px;
+}
+
+footer {
+	background: rgb(225,225,225);
+	padding: 20px 0;
+}
+
+footer p {
+	margin: 0;
+}
 
 
 
