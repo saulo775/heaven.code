@@ -116,6 +116,76 @@
         </div>
       </div>
     </section>
+
+    <section class="equipe">
+        <h2>Equipe</h2>
+        <div class="container equipe-container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="equipe-single">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="user-picture">
+                                  <div class="user-picture-child"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <h3>Saulo</h3>
+                                <p>suscipit neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam quis orci quam. Phasellus dictum erat at nibh bibendum, eget porta urna pretium. Maecenas vel augue massa. Nulla facilisi. Nulla a suscipit quam, eu pharetra justo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="equipe-single">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="user-picture">
+                                  <div class="user-picture-child"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <h3>Saulo</h3>
+                                <p>suscipit neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam quis orci quam. Phasellus dictum erat at nibh bibendum, eget porta urna pretium. Maecenas vel augue massa. Nulla facilisi. Nulla a suscipit quam, eu pharetra justo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="equipe-single">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="user-picture">
+                                  <div class="user-picture-child"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <h3>Saulo</h3>
+                                <p>suscipit neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam quis orci quam. Phasellus dictum erat at nibh bibendum, eget porta urna pretium. Maecenas vel augue massa. Nulla facilisi. Nulla a suscipit quam, eu pharetra justo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="equipe-single">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="user-picture">
+                                  <div class="user-picture-child"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <h3>Saulo</h3>
+                                <p>suscipit neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam quis orci quam. Phasellus dictum erat at nibh bibendum, eget porta urna pretium. Maecenas vel augue massa. Nulla facilisi. Nulla a suscipit quam, eu pharetra justo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--equipe-container-->
+      </section>
   </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
