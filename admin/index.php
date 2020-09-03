@@ -85,7 +85,7 @@
             </div>
           </div>
           <div class="col-md-9" >
-            <div class="panel panel-default">
+            <div id="sobre_section" class="panel panel-default">
               <div class="panel-heading cor-padrao">
                 <h3 class="panel-title">Sobre</h3>
               </div>
@@ -100,7 +100,7 @@
               </div>
             </div>
 
-            <div class="panel panel-default">
+            <div id="cadastrar_equipe_section" class="panel panel-default">
               <div class="panel-heading cor-padrao">
                 <h3 class="panel-title">cadastrar Equipe</h3>
               </div>
@@ -119,7 +119,7 @@
               </div>
             </div>
 
-            <div class="panel panel-default">
+            <div id="listar_equipe_section" class="panel panel-default">
               <div class="panel-heading cor-padrao">
                 <h3 class="panel-title">Membros da Equipe</h3>
               </div>
@@ -162,6 +162,7 @@
       $(function(){
 
         clickMenu();
+        scrollItem();
         function clickMenu() {
           $('#menu-principal a, .list-group a').click(function () {
             $('.list-group a').removeClass('active');
@@ -172,6 +173,15 @@
             return false;
           })
         }
+
+        function scrollItem(){
+          $('#menu-principal a, .list-group a').click(function (){
+            var ref = '#'+$(this).attr('ref_sys')+'_section';
+            var offset = $(ref).offset().top;
+            $('html, body').animate({'scrollTop':offset});
+          });
+        }
+
       })
     </script>
   </body>
