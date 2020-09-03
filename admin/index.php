@@ -20,15 +20,15 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar navbar-nav navbar-right">
+          <ul id="menu-principal" class="navbar navbar-nav navbar-right">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Cadastrar Equipe</a>
+              <a class="nav-link" href="#" ref_sys = "sobre">Editar Sobre</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Editar Sobre</a>
+              <a class="nav-link" href="#" ref_sys = "cadastrar_equipe">Cadastrar Equipe</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" >Gerenciar Equipe</a>
+              <a class="nav-link" href="#" ref_sys = "listar_equipe">Listar Equipe</a>
             </li>
 
           </ul>
@@ -70,8 +70,6 @@
         <div class="container">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
           </ol>
         </div>
     </section>
@@ -80,11 +78,11 @@
       <div class="container" >
         <div class="row" >
           <div class="col-md-3" >
-            <ul class="list-group">
-              <li class="list-group-item active">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Morbi leo risus</li>
-            </ul>
+            <div class="list-group">
+              <a href="#" class="list-group-item active " ref_sys = "sobre">Sobre</a>
+              <a href="#" class="list-group-item" ref_sys = "cadastrar_equipe">Cadastrar Equipe</a>
+              <a href="#" class="list-group-item" ref_sys = "listar_equipe">Listar Equipe</a>
+            </div>
           </div>
           <div class="col-md-9" >
             <div class="panel panel-default">
@@ -135,11 +133,16 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>saulo</td>
-                      <td><button type="button" class="btn btn-sm btn-danger">Excluir</button></td>
-                    </tr>
+                    <?php
+                      for($i=0; $i<5; $i++){
+                    ?>
+                        <tr>
+                          <td>1</td>
+                          <td>saulo</td>
+                          <td><button type="button" class="btn btn-sm btn-danger">Excluir</button></td>
+                        </tr>
+
+                    <?php }?>
                   </tbody>
                 </table>
               </div>
@@ -155,5 +158,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+
+        clickMenu();
+        function clickMenu() {
+          $('#menu-principal a, .list-group a').click(function () {
+            $('.list-group a').removeClass('active');
+            $('#menu-principal a').parent().removeClass('active');
+
+            $('menu-principal a[ref_sys='+$(this).attr('ref_sys')+']').parent().addClass('active');
+            $('.list-group a[ref_sys='+$(this).attr('ref_sys')+']').addClass('active');
+            return false;
+          })
+        }
+      })
+    </script>
   </body>
 </html>
