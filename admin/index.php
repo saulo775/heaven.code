@@ -1,3 +1,10 @@
+<?php
+  $pdo = new PDO('mysql:host=localhost;dbname=heaven_code','root','');
+  $sobre = $pdo->prepare("SELECT * FROM `tb_sobre`");
+  $sobre->execute();
+  $sobre = $sobre->fetch()['sobre'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -85,17 +92,32 @@
             </div>
           </div>
           <div class="col-md-9" >
+
+          <?php
+            if(isset($_POST['editar_sobre'])){
+              $sobre = $_POST['sobre'];
+              $pdo->exec("DELETE FROM `tb_sobre`");
+              $sql = $pdo->prepare("INSERT INTO `tb_sobre` VALUES (null,?)");
+              $sql->execute(array($sobre));
+              echo '<div class="alert alert-success" role="alert">O código HTML <b>Sobre</b> foi editado com sucesso!</div>';
+              $sobre = $pdo->prepare("SELECT * FROM `tb_sobre`");
+              $sobre->execute();
+              $sobre = $sobre->fetch()['sobre'];
+            }
+          ?>
+
             <div id="sobre_section" class="panel panel-default">
               <div class="panel-heading cor-padrao">
                 <h3 class="panel-title">Sobre</h3>
               </div>
               <div class="panel-body">
-                <form>
+                <form method="post">
                   <div class="form-group">
                     <label for="email">Código HTML:</label>
-                    <textarea class="form-control" style="height: 140px; resize: vertical;"></textarea>
+                    <textarea name="sobre" class="form-control" style="height: 140px; resize: vertical;"><?php echo $sobre; ?></textarea>
                   </div>
-                  <button type="submit" class="btn btn-default" style="background-color: white; margin-bottom:10px">Enviar</button>
+                  <input type="hidden" name="editar_sobre" value="">
+                  <button type="submit" name="acao" class="btn btn-default" style="background-color: white; margin-bottom:10px">Enviar</button>
                 </form>
               </div>
             </div>
