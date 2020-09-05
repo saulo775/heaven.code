@@ -103,6 +103,13 @@
               $sobre = $pdo->prepare("SELECT * FROM `tb_sobre`");
               $sobre->execute();
               $sobre = $sobre->fetch()['sobre'];
+            }else if (isset($_POST['cadastrar_equipe'])){
+              $nome = $_POST['nome_membro'];
+              $descricao = $_POST['descricao'];
+              $sql = $pdo->prepare("INSERT INTO `tb_equipe` VALUES (null,?,?)");
+              $sql->execute(array($nome, $descricao));
+              echo '<div class="alert alert-success" role="alert">O membro da equipe foi cadastrado com sucesso!</div>';
+
             }
           ?>
 
@@ -127,15 +134,16 @@
                 <h3 class="panel-title">cadastrar Equipe</h3>
               </div>
               <div class="panel-body">
-                <form>
-                <div class="form-group">
+                <form method="post">
+                  <div class="form-group">
                     <label for="email">Nome do membro</label>
                     <input type="text" name="nome_membro" class="form-control">
                   </div>
                   <div class="form-group">
                     <label for="email">Descrição do membro</label>
-                    <textarea class="form-control" style="height: 140px; resize: vertical;"></textarea>
+                    <textarea name="descricao" class="form-control" style="height: 140px; resize: vertical;"></textarea>
                   </div>
+                  <input type="hidden" name="cadastrar_equipe" value="">
                   <button type="submit" class="btn btn-default" style="background-color: white; margin-bottom:10px">Enviar</button>
                 </form>
               </div>
@@ -156,15 +164,18 @@
                   </thead>
                   <tbody>
                     <?php
-                      for($i=0; $i<5; $i++){
+                      $selecionarMembros = $pdo->prepare("SELECT `id`,`nome` FROM `tb_equipe`");
+                      $selecionarMembros->execute();
+                      $membros = $selecionarMembros->fetchAll();
+
+                      foreach($membros as $key=>$value){
                     ?>
                         <tr>
-                          <td>1</td>
-                          <td>saulo</td>
+                          <td><?php echo $value['id']?></td>
+                          <td><?php echo $value['nome']?></td>
                           <td><button type="button" class="btn btn-sm btn-danger">Excluir</button></td>
                         </tr>
-
-                    <?php }?>
+                    <?php } ?>
                   </tbody>
                 </table>
               </div>
